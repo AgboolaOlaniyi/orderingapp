@@ -10,7 +10,7 @@ const io = socketIO(server)
 const path = require("path")
 
 app.get("/", (req,res)=>{
-    res.send("Welcome to the ordering app")
+    res.sendFile(path.join(__dirname + "/welcome.html"))
 })
 
 app.get("/sender", (req,res)=>{
